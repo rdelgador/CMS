@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}
+
+<h4>Lista de Musica</h4>
+  <ul>{% for item in cosas %}
+	<li>{{item}}</li>
+  </ul>
+  {% endfor %}
+
+  {% set title ='Titulo Central' %}

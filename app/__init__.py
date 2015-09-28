@@ -10,6 +10,11 @@ from flask.ext.bower import Bower
 # Define the WSGI application object
 app = Flask(__name__)
 
+
+
+
+
+
 # Configurations
 app.config.from_object('config')
 
@@ -19,6 +24,11 @@ db = SQLAlchemy(app)
 
 # Initiate Bower
 Bower(app)
+
+@app.route('/')
+def index():
+	return 'app works'
+
 
 # Sample HTTP error handling
 @app.errorhandler(404)
